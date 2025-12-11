@@ -5,7 +5,7 @@
 # Hi 👋, I'm Surya Prakash Kahar
 ### B.Tech CSE @ IIIT Bhagalpur | Aspiring Software Engineer  
 ### DSA • Web Dev • AI/ML Enthusiast | Open to Internship Opportunities
-
+ 
 </div>
 
 ---

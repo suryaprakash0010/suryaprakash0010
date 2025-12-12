@@ -100,6 +100,13 @@ I’m currently seeking **internship opportunities** where I can apply my skills
 
 ---
 
+
+## 🏆GitHub Trophies
+
+![](https://github-trophies.vercel.app/?username=suryaprakash0010&theme=radical&no-frame=false&no-bg=false&margin-w=4)
+
+---
+
 ## 🧩 GitHub Summary Cards
 
 <div align="center">

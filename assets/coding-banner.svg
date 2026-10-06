@@ -1,0 +1,914 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Surya Prakash Kahar — Coding Profile</title>
+  <desc id="desc">Animated developer profile banner showing competitive programming ratings and coding statistics.</desc>
+
+  <defs>
+
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10132b"/>
+      <stop offset=".55" stop-color="#171638"/>
+      <stop offset="1" stop-color="#111b35"/>
+    </linearGradient>
+
+    <!-- Accent -->
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#65e8d2"/>
+      <stop offset=".5" stop-color="#8e8cff"/>
+      <stop offset="1" stop-color="#fa78bd"/>
+    </linearGradient>
+
+    <!-- Animated glow -->
+    <radialGradient id="glow">
+      <stop stop-color="#715cff" stop-opacity=".32"/>
+      <stop offset=".45" stop-color="#715cff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#715cff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="coreGlow">
+      <stop offset="0" stop-color="#8e8cff" stop-opacity=".45"/>
+      <stop offset=".45" stop-color="#65e8d2" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#65e8d2" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid -->
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path
+        d="M34 0H0V34"
+        fill="none"
+        stroke="#b9c5ff"
+        stroke-opacity=".07"
+        stroke-width="1"
+      />
+      <circle
+        cx="0"
+        cy="0"
+        r="1.5"
+        fill="#c1caff"
+        fill-opacity=".18"
+      />
+    </pattern>
+
+    <!-- Glow filters -->
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Orbit paths -->
+    <path
+      id="orbit1"
+      d="M150 116
+         m-120 0
+         a120 120 0 1 0 240 0
+         a120 120 0 1 0-240 0"
+    />
+
+    <path
+      id="orbit2"
+      d="M150 116
+         m-91 0
+         a91 91 0 1 0 182 0
+         a91 91 0 1 0-182 0"
+    />
+
+    <path
+      id="orbit3"
+      d="M150 116
+         m-62 0
+         a62 62 0 1 0 124 0
+         a62 62 0 1 0-124 0"
+    />
+
+  </defs>
+
+  <!-- ====================================================== -->
+  <!-- BACKGROUND -->
+  <!-- ====================================================== -->
+
+  <rect
+    width="1200"
+    height="400"
+    rx="24"
+    fill="url(#bg)"
+  />
+
+  <rect
+    width="1200"
+    height="400"
+    rx="24"
+    fill="url(#grid)"
+  />
+
+  <!-- Animated background glow -->
+  <ellipse
+    cx="940"
+    cy="195"
+    rx="330"
+    ry="260"
+    fill="url(#glow)"
+  >
+    <animate
+      attributeName="opacity"
+      values=".55;1;.55"
+      dur="5s"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="rx"
+      values="300;350;300"
+      dur="7s"
+      repeatCount="indefinite"
+    />
+  </ellipse>
+
+  <!-- Bottom wave -->
+  <path
+    d="M0 328C196 270 302 377 493 323s293-60 424-15 190 35 283-8v100H0Z"
+    fill="#151936"
+    opacity=".6"
+  />
+
+  <path
+    d="M0 350c210-65 331 22 516-21s322-88 684-5"
+    fill="none"
+    stroke="url(#accent)"
+    stroke-opacity=".22"
+    stroke-width="2"
+  >
+    <animate
+      attributeName="stroke-opacity"
+      values=".12;.32;.12"
+      dur="4s"
+      repeatCount="indefinite"
+    />
+  </path>
+
+
+  <!-- ====================================================== -->
+  <!-- LEFT CONTENT -->
+  <!-- ====================================================== -->
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+
+    <!-- Accent -->
+    <rect
+      x="76"
+      y="55"
+      width="40"
+      height="4"
+      rx="2"
+      fill="url(#accent)"
+    >
+      <animate
+        attributeName="width"
+        values="40;75;40"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+    </rect>
+
+    <!-- Name -->
+    <text
+      x="76"
+      y="93"
+      fill="#a9b1d6"
+      font-size="13"
+      letter-spacing="3"
+    >
+      SURYA PRAKASH KAHAR
+    </text>
+
+    <!-- Title -->
+    <text
+      x="76"
+      y="130"
+      fill="#f4f5ff"
+      font-size="35"
+      font-weight="700"
+      letter-spacing="-1.5"
+    >
+      CODING PROFILE
+      <tspan fill="#65e8d2">.</tspan>
+    </text>
+
+
+    <!-- ================================================== -->
+    <!-- LEETCODE -->
+    <!-- ================================================== -->
+
+    <g transform="translate(76 158)">
+
+      <rect
+        x="0"
+        y="0"
+        width="235"
+        height="58"
+        rx="10"
+        fill="#202449"
+        fill-opacity=".82"
+        stroke="#8e8cff"
+        stroke-opacity=".20"
+      />
+
+      <text
+        x="16"
+        y="22"
+        fill="#8e8cff"
+        font-size="11"
+        letter-spacing="1.5"
+      >
+        LEETCODE
+      </text>
+
+      <text
+        x="16"
+        y="44"
+        fill="#f4f5ff"
+        font-size="20"
+        font-weight="700"
+      >
+        1,952
+      </text>
+
+      <text
+        x="93"
+        y="43"
+        fill="#a9b1d6"
+        font-size="11"
+      >
+        RATING
+      </text>
+
+      <text
+        x="148"
+        y="43"
+        fill="#65e8d2"
+        font-size="11"
+        font-weight="700"
+      >
+        KNIGHT
+      </text>
+
+    </g>
+
+
+    <!-- ================================================== -->
+    <!-- CODECHEF -->
+    <!-- ================================================== -->
+
+    <g transform="translate(323 158)">
+
+      <rect
+        x="0"
+        y="0"
+        width="235"
+        height="58"
+        rx="10"
+        fill="#202449"
+        fill-opacity=".82"
+        stroke="#fa78bd"
+        stroke-opacity=".20"
+      />
+
+      <text
+        x="16"
+        y="22"
+        fill="#fa78bd"
+        font-size="11"
+        letter-spacing="1.5"
+      >
+        CODECHEF
+      </text>
+
+      <text
+        x="16"
+        y="44"
+        fill="#f4f5ff"
+        font-size="20"
+        font-weight="700"
+      >
+        1,851
+      </text>
+
+      <text
+        x="93"
+        y="43"
+        fill="#a9b1d6"
+        font-size="11"
+      >
+        RATING
+      </text>
+
+      <text
+        x="149"
+        y="43"
+        fill="#65e8d2"
+        font-size="11"
+        font-weight="700"
+      >
+        4★
+      </text>
+
+    </g>
+
+
+    <!-- ================================================== -->
+    <!-- DSA -->
+    <!-- ================================================== -->
+
+    <g transform="translate(76 230)">
+
+      <rect
+        x="0"
+        y="0"
+        width="235"
+        height="58"
+        rx="10"
+        fill="#202449"
+        fill-opacity=".82"
+        stroke="#65e8d2"
+        stroke-opacity=".20"
+      />
+
+      <text
+        x="16"
+        y="22"
+        fill="#65e8d2"
+        font-size="11"
+        letter-spacing="1.5"
+      >
+        DSA
+      </text>
+
+      <text
+        x="16"
+        y="44"
+        fill="#f4f5ff"
+        font-size="20"
+        font-weight="700"
+      >
+        900+
+      </text>
+
+      <text
+        x="91"
+        y="43"
+        fill="#a9b1d6"
+        font-size="11"
+      >
+        QUESTIONS SOLVED
+      </text>
+
+    </g>
+
+
+    <!-- ================================================== -->
+    <!-- ACHIEVEMENT -->
+    <!-- ================================================== -->
+
+    <g transform="translate(323 230)">
+
+      <rect
+        x="0"
+        y="0"
+        width="235"
+        height="58"
+        rx="10"
+        fill="#202449"
+        fill-opacity=".82"
+        stroke="#65e8d2"
+        stroke-opacity=".20"
+      />
+
+      <text
+        x="16"
+        y="22"
+        fill="#65e8d2"
+        font-size="11"
+        letter-spacing="1.5"
+      >
+        ACHIEVEMENT
+      </text>
+
+      <text
+        x="16"
+        y="44"
+        fill="#f4f5ff"
+        font-size="20"
+        font-weight="700"
+      >
+        TOP 3.3%
+      </text>
+
+      <text
+        x="130"
+        y="43"
+        fill="#a9b1d6"
+        font-size="11"
+      >
+        LEETCODE
+      </text>
+
+    </g>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- RIGHT SIDE ANIMATED SYSTEM -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(833 83)">
+
+    <!-- Large ambient glow -->
+    <circle
+      cx="150"
+      cy="116"
+      r="150"
+      fill="url(#coreGlow)"
+      opacity=".35"
+    >
+      <animate
+        attributeName="r"
+        values="135;165;135"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values=".25;.55;.25"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+
+    <!-- ================================================== -->
+    <!-- OUTER ORBIT -->
+    <!-- ================================================== -->
+
+    <g>
+      <circle
+        cx="150"
+        cy="116"
+        r="120"
+        fill="none"
+        stroke="#9c9dff"
+        stroke-opacity=".18"
+        stroke-width="1.5"
+      />
+
+      <!-- rotating highlight -->
+      <circle
+        cx="150"
+        cy="116"
+        r="120"
+        fill="none"
+        stroke="url(#accent)"
+        stroke-width="2"
+        stroke-dasharray="18 105"
+        stroke-linecap="round"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 150 116"
+          to="360 150 116"
+          dur="8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <!-- moving outer node -->
+      <circle
+        r="5"
+        fill="#65e8d2"
+        filter="url(#softGlow)"
+      >
+        <animateMotion
+          dur="6s"
+          repeatCount="indefinite"
+          rotate="auto"
+        >
+          <mpath href="#orbit1"/>
+        </animateMotion>
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================== -->
+    <!-- SECOND ORBIT -->
+    <!-- ================================================== -->
+
+    <g>
+
+      <circle
+        cx="150"
+        cy="116"
+        r="91"
+        fill="none"
+        stroke="#70e7d2"
+        stroke-opacity=".23"
+        stroke-width="1.5"
+        stroke-dasharray="3 9"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="360 150 116"
+          to="0 150 116"
+          dur="12s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+
+      <!-- orbit highlight -->
+      <circle
+        cx="150"
+        cy="116"
+        r="91"
+        fill="none"
+        stroke="#65e8d2"
+        stroke-opacity=".65"
+        stroke-width="2"
+        stroke-dasharray="25 150"
+        stroke-linecap="round"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 150 116"
+          to="360 150 116"
+          dur="6s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+
+      <!-- moving pink node -->
+      <circle
+        r="4"
+        fill="#fa78bd"
+        filter="url(#softGlow)"
+      >
+        <animateMotion
+          dur="5s"
+          repeatCount="indefinite"
+          rotate="auto"
+        >
+          <mpath href="#orbit2"/>
+        </animateMotion>
+      </circle>
+
+    </g>
+
+
+    <!-- ================================================== -->
+    <!-- INNER ORBIT -->
+    <!-- ================================================== -->
+
+    <circle
+      cx="150"
+      cy="116"
+      r="62"
+      fill="#202449"
+      stroke="#8f91ff"
+      stroke-opacity=".35"
+    />
+
+    <circle
+      cx="150"
+      cy="116"
+      r="62"
+      fill="none"
+      stroke="#65e8d2"
+      stroke-opacity=".35"
+      stroke-width="1"
+      stroke-dasharray="2 8"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 150 116"
+        to="360 150 116"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+
+    <!-- ================================================== -->
+    <!-- CENTER CORE -->
+    <!-- ================================================== -->
+
+    <circle
+      cx="150"
+      cy="116"
+      r="48"
+      fill="url(#coreGlow)"
+      opacity=".6"
+    >
+      <animate
+        attributeName="r"
+        values="42;52;42"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values=".35;.75;.35"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+
+    <!-- ================================================== -->
+    <!-- CODE BRACKETS -->
+    <!-- ================================================== -->
+
+    <g>
+
+      <path
+        d="m132 91-25 25 25 25
+           M168 91l25 25-25 25
+           m-12-58-14 66"
+        fill="none"
+        stroke="url(#accent)"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#softGlow)"
+      >
+
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          values="0 150 116;4 150 116;0 150 116;-4 150 116;0 150 116"
+          dur="5s"
+          repeatCount="indefinite"
+        />
+
+      </path>
+
+    </g>
+
+
+    <!-- ================================================== -->
+    <!-- TOP NODE -->
+    <!-- ================================================== -->
+
+    <circle
+      cx="150"
+      cy="-4"
+      r="5"
+      fill="#65e8d2"
+      filter="url(#softGlow)"
+    >
+      <animate
+        attributeName="r"
+        values="4;7;4"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values=".5;1;.5"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+
+    <!-- ================================================== -->
+    <!-- RIGHT NODE -->
+    <!-- ================================================== -->
+
+    <circle
+      cx="260"
+      cy="160"
+      r="4"
+      fill="#fa78bd"
+      filter="url(#softGlow)"
+    >
+      <animate
+        attributeName="r"
+        values="3;6;3"
+        dur="2.5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+
+    <!-- ================================================== -->
+    <!-- LEFT NODE -->
+    <!-- ================================================== -->
+
+    <circle
+      cx="61"
+      cy="186"
+      r="5"
+      fill="#8e8cff"
+      filter="url(#softGlow)"
+    >
+      <animate
+        attributeName="r"
+        values="4;7;4"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+
+    <!-- ================================================== -->
+    <!-- ROTATING DIAMOND -->
+    <!-- ================================================== -->
+
+    <rect
+      x="237"
+      y="18"
+      width="15"
+      height="15"
+      rx="4"
+      fill="#fa78bd"
+      filter="url(#softGlow)"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="25 244 25;115 244 25;205 244 25;295 244 25;385 244 25"
+        dur="8s"
+        repeatCount="indefinite"
+      />
+    </rect>
+
+
+    <!-- ================================================== -->
+    <!-- PLUS MARK LEFT -->
+    <!-- ================================================== -->
+
+    <path
+      d="M35 49h20m-10-10v20"
+      stroke="#65e8d2"
+      stroke-opacity=".75"
+      stroke-width="2"
+      stroke-linecap="round"
+    >
+      <animate
+        attributeName="opacity"
+        values=".2;1;.2"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+    </path>
+
+
+    <!-- ================================================== -->
+    <!-- PLUS MARK RIGHT -->
+    <!-- ================================================== -->
+
+    <path
+      d="M275 219h17m-8-8v17"
+      stroke="#8e8cff"
+      stroke-opacity=".8"
+      stroke-width="2"
+      stroke-linecap="round"
+    >
+      <animate
+        attributeName="opacity"
+        values=".2;1;.2"
+        dur="2.5s"
+        repeatCount="indefinite"
+      />
+    </path>
+
+
+    <!-- ================================================== -->
+    <!-- SMALL FLOATING PARTICLES -->
+    <!-- ================================================== -->
+
+    <g fill="#65e8d2">
+
+      <circle cx="48" cy="82" r="2">
+        <animate
+          attributeName="cy"
+          values="82;72;82"
+          dur="4s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="opacity"
+          values=".2;1;.2"
+          dur="4s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <circle cx="280" cy="75" r="2">
+        <animate
+          attributeName="cy"
+          values="75;64;75"
+          dur="3.5s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="opacity"
+          values=".2;1;.2"
+          dur="3.5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+    </g>
+
+
+    <g fill="#fa78bd">
+
+      <circle cx="90" cy="30" r="2">
+        <animate
+          attributeName="cy"
+          values="30;20;30"
+          dur="4.5s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="opacity"
+          values=".15;1;.15"
+          dur="4.5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <circle cx="270" cy="190" r="2">
+        <animate
+          attributeName="cy"
+          values="190;178;190"
+          dur="3.8s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="opacity"
+          values=".15;1;.15"
+          dur="3.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+    </g>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- FOOTER -->
+  <!-- ====================================================== -->
+
+  <g
+    transform="translate(76 358)"
+    fill="#7780a8"
+    font-family="ui-monospace, monospace"
+    font-size="12"
+  >
+
+    <circle
+      cx="4"
+      cy="0"
+      r="3"
+      fill="#65e8d2"
+    >
+      <animate
+        attributeName="r"
+        values="2;4;2"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+    <text
+      x="16"
+      y="6"
+      letter-spacing="1"
+    >
+      900+ DSA PROBLEMS  /  COMPETITIVE PROGRAMMER  /  SDE INTERN
+    </text>
+
+  </g>
+
+</svg>
